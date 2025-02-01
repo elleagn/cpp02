@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/01 08:37:27 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/01 17:44:08 by gozon            ###   ########.fr       */
+/*   Created: 2025/02/01 17:11:01 by gozon             #+#    #+#             */
+/*   Updated: 2025/02/01 17:28:07 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#include "Fixed.hpp"
+#include <iostream>
 
-# include <iostream>
+int main( void ) {
 
-class Fixed {
+    Fixed a;
+    Fixed b( a );
+    Fixed c;
+    c = b;
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
+    return 0;
 
-    public:
+}
 
-        Fixed(void);
-        Fixed(const Fixed& fixed);
-        ~Fixed(void);
-
-        Fixed& operator=(const Fixed& fixed);
-
-        int getRawBits(void) const;
-        void setRawBits(int const raw);
-
-    private:
-
-        int raw;
-        static int const fract_size;
-
-};
-
-#endif
