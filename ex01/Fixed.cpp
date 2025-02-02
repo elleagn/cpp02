@@ -6,13 +6,13 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 09:16:54 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/01 18:55:24 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/02 09:26:31 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int const Fixed::fract_size = 8;
+int const Fixed::fract_size = 7;
 
 Fixed::Fixed() : raw(0) {
 
@@ -44,7 +44,7 @@ Fixed::Fixed(float const number) {
         std::cout << "Integer overflow (float)" << std::endl;
     }
     else {
-        this->raw = (int)(number * (1 << this->fract_size));
+        this->raw = roundf((number * (1 << this->fract_size)));
     }
 }
 

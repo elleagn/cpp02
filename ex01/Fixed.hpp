@@ -6,7 +6,7 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 08:37:27 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/01 18:50:43 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/02 09:23:41 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <climits>
-# include <cfloat>
+# include <cmath>
 
 class Fixed {
 
