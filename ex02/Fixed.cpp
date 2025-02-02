@@ -6,29 +6,24 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 09:16:54 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/02 10:40:44 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/02 17:37:17 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int const Fixed::fract_size = 7;
+int const Fixed::fract_size = 8;
 
 Fixed::Fixed() : raw(0) {
-
-    std::cout << "Default constructor called" << std::endl;
 
 }
 
 Fixed::Fixed(const Fixed& fixed) : raw(fixed.raw) {
 
-    std::cout << "Copy constructor called" << std::endl;
-
 }
 
 Fixed::Fixed(int const number) {
 
-    std::cout << "Int constructor called" << std::endl;
     if (number > (INT_MAX >> this->fract_size)) {
         std::cout << "Integer overflow" << std::endl;
     }
@@ -39,7 +34,6 @@ Fixed::Fixed(int const number) {
 
 Fixed::Fixed(float const number) {
 
-    std::cout << "Float constructor called" << std::endl;
     if (number * (1 << this->fract_size) > INT_MAX) {
         std::cout << "Integer overflow (float)" << std::endl;
     }
@@ -51,14 +45,11 @@ Fixed::Fixed(float const number) {
 Fixed& Fixed::operator=(const Fixed& fixed) {
 
     this->raw = fixed.raw;
-    std::cout << "Copy assignment operator called" << std::endl;
     return (*this);
 
 }
 
 Fixed::~Fixed() {
-
-    std::cout << "Destructor called" << std::endl;
 
 }
 
@@ -132,7 +123,7 @@ Fixed Fixed::operator*(const Fixed& fixed) const {
     Fixed result;
     long long tmp;
 
-    tmp = this->raw * fixed.raw;
+    tmp = this->raw * fixed.raw + (1 << (Fixed::fract_size - 1));
     tmp = tmp >> Fixed::fract_size;
     result.raw = tmp;
 
@@ -145,8 +136,8 @@ Fixed Fixed::operator/(const Fixed& fixed) const {
     Fixed result;
     long long tmp;
 
-    tmp = this->raw / fixed.raw;
-    tmp = tmp << Fixed::fract_size;
+    tmp = this->raw << Fixed::fract_size;
+    tmp = tmp / fixed.raw;
     result.raw = tmp;
 
     return (result);

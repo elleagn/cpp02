@@ -6,28 +6,162 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:11:01 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/01 21:24:15 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/02 18:01:21 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <iostream>
+#include <iomanip>
+
+bool testComparisons(void) {
+
+    bool works = true;
+    Fixed a(0.00390625f);
+    Fixed b(0.0078125f);
+    Fixed c(a);
+
+    std::cout << std::setfill('-') << std::setw(10) << "" << " COMPARISONS ";
+    std::cout << std::setw(10) << "" << std::endl << std::endl;
+
+    std::cout << "a is " << a << std::endl;
+    std::cout << "b is " << b << std::endl;
+    std::cout << "c is " << c << std::endl << std::endl;
+
+    std::cout << "a > b: ";
+    if (a > b)
+    {
+        std::cout << "true";
+        works = false;
+    }
+    else {
+
+        std::cout << "false";
+    }
+    std::cout << " expected false" << std::endl;
+    std::cout << "a < b: ";
+    if (a < b)
+    {
+        std::cout << "true";
+    }
+    else {
+        works = false;
+        std::cout << "false";
+    }
+    std::cout << " expected true" << std::endl;
+        std::cout << "a >= b: ";
+    if (a >= b)
+    {
+        std::cout << "true";
+        works = false;
+    }
+    else {
+
+        std::cout << "false";
+    }
+    std::cout << " expected false" << std::endl;
+    std::cout << "a <= b: ";
+    if (a <= b)
+    {
+        std::cout << "true";
+    }
+    else {
+        works = false;
+        std::cout << "false";
+    }
+    std::cout << " expected true" << std::endl;
+    std::cout << "a == b: ";
+    if (a == b)
+    {
+        std::cout << "true";
+        works = false;
+    }
+    else {
+
+        std::cout << "false";
+    }
+    std::cout << " expected false" << std::endl;
+    std::cout << "a != b: ";
+    if (a != b)
+    {
+        std::cout << "true";
+    }
+    else {
+        works = false;
+        std::cout << "false";
+    }
+    std::cout << " expected true" << std::endl << std::endl;
+
+    std::cout << "a > c: ";
+    if (a > c)
+    {
+        std::cout << "true";
+        works = false;
+    }
+    else {
+
+        std::cout << "false";
+    }
+    std::cout << " expected false" << std::endl;
+    std::cout << "a < c: ";
+    if (a < c)
+    {
+        std::cout << "true";
+        works = false;
+    }
+    else {
+
+        std::cout << "false";
+    }
+    std::cout << " expected false" << std::endl;
+    std::cout << "a <= c: ";
+    if (a <= c)
+    {
+        std::cout << "true";
+    }
+    else {
+        works = false;
+        std::cout << "false";
+    }
+    std::cout << " expected true" << std::endl;
+    std::cout << "a >= c: ";
+    if (a >= c)
+    {
+        std::cout << "true";
+    }
+    else {
+        works = false;
+        std::cout << "false";
+    }
+    std::cout << " expected true" << std::endl;
+    std::cout << "a != c: ";
+    if (a != c)
+    {
+        std::cout << "true";
+        works = false;
+    }
+    else {
+
+        std::cout << "false";
+    }
+    std::cout << " expected false" << std::endl;
+    std::cout << "a == c: ";
+    if (a == c)
+    {
+        std::cout << "true";
+    }
+    else {
+        works = false;
+        std::cout << "false";
+    }
+    std::cout << " expected true" << std::endl << std::endl;
+
+    return (works);
+}
 
 int main( void ) {
 
-    Fixed a;
-    Fixed const b( 10 );
-    Fixed const c( 42.42f );
-    Fixed const d( b );
-    a = Fixed( 1234.4321f );
-    std::cout << "a is " << a << std::endl;
-    std::cout << "b is " << b << std::endl;
-    std::cout << "c is " << c << std::endl;
-    std::cout << "d is " << d << std::endl;
-    std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-    std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-    std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-    std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-    return 0;
-
+    if (!testComparisons()) {
+        std::cout << "Error with comparisons.";
+        return (1);
+    }
 }
