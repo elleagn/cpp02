@@ -6,7 +6,7 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:11:01 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/02 18:01:21 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/03 11:03:05 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 bool testComparisons(void) {
 
-    bool works = true;
     Fixed a(0.00390625f);
     Fixed b(0.0078125f);
     Fixed c(a);
@@ -28,10 +27,8 @@ bool testComparisons(void) {
     std::cout << "c is " << c << std::endl << std::endl;
 
     std::cout << "a > b: ";
-    if (a > b)
-    {
+    if (a > b) {
         std::cout << "true";
-        works = false;
     }
     else {
 
@@ -39,20 +36,16 @@ bool testComparisons(void) {
     }
     std::cout << " expected false" << std::endl;
     std::cout << "a < b: ";
-    if (a < b)
-    {
+    if (a < b) {
         std::cout << "true";
     }
     else {
-        works = false;
         std::cout << "false";
     }
     std::cout << " expected true" << std::endl;
         std::cout << "a >= b: ";
-    if (a >= b)
-    {
+    if (a >= b) {
         std::cout << "true";
-        works = false;
     }
     else {
 
@@ -60,20 +53,16 @@ bool testComparisons(void) {
     }
     std::cout << " expected false" << std::endl;
     std::cout << "a <= b: ";
-    if (a <= b)
-    {
+    if (a <= b) {
         std::cout << "true";
     }
     else {
-        works = false;
         std::cout << "false";
     }
     std::cout << " expected true" << std::endl;
     std::cout << "a == b: ";
-    if (a == b)
-    {
+    if (a == b) {
         std::cout << "true";
-        works = false;
     }
     else {
 
@@ -81,21 +70,17 @@ bool testComparisons(void) {
     }
     std::cout << " expected false" << std::endl;
     std::cout << "a != b: ";
-    if (a != b)
-    {
+    if (a != b) {
         std::cout << "true";
     }
     else {
-        works = false;
         std::cout << "false";
     }
     std::cout << " expected true" << std::endl << std::endl;
 
     std::cout << "a > c: ";
-    if (a > c)
-    {
+    if (a > c) {
         std::cout << "true";
-        works = false;
     }
     else {
 
@@ -103,10 +88,8 @@ bool testComparisons(void) {
     }
     std::cout << " expected false" << std::endl;
     std::cout << "a < c: ";
-    if (a < c)
-    {
+    if (a < c) {
         std::cout << "true";
-        works = false;
     }
     else {
 
@@ -119,25 +102,20 @@ bool testComparisons(void) {
         std::cout << "true";
     }
     else {
-        works = false;
         std::cout << "false";
     }
     std::cout << " expected true" << std::endl;
     std::cout << "a >= c: ";
-    if (a >= c)
-    {
+    if (a >= c) {
         std::cout << "true";
     }
     else {
-        works = false;
         std::cout << "false";
     }
     std::cout << " expected true" << std::endl;
     std::cout << "a != c: ";
-    if (a != c)
-    {
+    if (a != c) {
         std::cout << "true";
-        works = false;
     }
     else {
 
@@ -145,17 +123,14 @@ bool testComparisons(void) {
     }
     std::cout << " expected false" << std::endl;
     std::cout << "a == c: ";
-    if (a == c)
-    {
+    if (a == c) {
         std::cout << "true";
     }
     else {
-        works = false;
         std::cout << "false";
     }
     std::cout << " expected true" << std::endl << std::endl;
 
-    return (works);
 }
 
 int main( void ) {

@@ -6,7 +6,7 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 09:16:54 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/02 17:37:17 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/03 13:25:08 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,29 @@ Fixed::Fixed(const Fixed& fixed) : raw(fixed.raw) {
 
 Fixed::Fixed(int const number) {
 
-    if (number > (INT_MAX >> this->fract_size)) {
+    long long tmp;
+
+    std::cout << "Int constructor called" << std::endl;
+    tmp = number << this->fract_size;
+    if (tmp > INT_MAX || tmp < INT_MIN) {
         std::cout << "Integer overflow" << std::endl;
     }
     else {
-        this->raw = number << this->fract_size;
+        this->raw = tmp;
     }
 }
 
 Fixed::Fixed(float const number) {
 
-    if (number * (1 << this->fract_size) > INT_MAX) {
+    float tmp;
+
+    std::cout << "Float constructor called" << std::endl;
+    tmp = number * (1 << this->fract_size);
+    if (tmp > 2147483647.0 || tmp < -2147483648.0) {
         std::cout << "Integer overflow (float)" << std::endl;
     }
     else {
-        this->raw = roundf((number * (1 << this->fract_size)));
+        this->raw = roundf(tmp);
     }
 }
 
