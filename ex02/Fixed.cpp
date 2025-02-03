@@ -6,7 +6,7 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 09:16:54 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/03 13:25:08 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/03 15:03:25 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,13 @@ int const Fixed::fract_size = 8;
 
 Fixed::Fixed() : raw(0) {
 
+    std::cout << "Default constructor called" << std::endl;
+
 }
 
 Fixed::Fixed(const Fixed& fixed) : raw(fixed.raw) {
+
+    std::cout << "Copy constructor called" << std::endl;
 
 }
 
@@ -53,12 +57,13 @@ Fixed::Fixed(float const number) {
 Fixed& Fixed::operator=(const Fixed& fixed) {
 
     this->raw = fixed.raw;
+    std::cout << "Copy assignment operator called" << std::endl;
     return (*this);
 
 }
 
 Fixed::~Fixed() {
-
+    std::cout << "Destructor called" << std::endl;
 }
 
 int Fixed::getRawBits(void) const {
@@ -175,7 +180,7 @@ Fixed& Fixed::operator--(void) {
 
 Fixed& Fixed::operator--(int) {
 
-    this->raw += 1;
+    this->raw -= 1;
     return (*this);
 
 }
