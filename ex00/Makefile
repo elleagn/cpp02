@@ -6,11 +6,11 @@
 #    By: gozon <gozon@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/18 11:02:35 by gozon             #+#    #+#              #
-#    Updated: 2025/02/01 17:13:02 by gozon            ###   ########.fr        #
+#    Updated: 2025/02/03 15:19:53 by gozon            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = a.out
+NAME = tests
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC_FILES = Fixed.cpp main.cpp
