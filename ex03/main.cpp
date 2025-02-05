@@ -6,7 +6,7 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:11:01 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/05 12:55:49 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/05 14:02:42 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,6 +145,75 @@ int main(void) {
 		float p2 = 4;
 		std::string pointName = "P4";
 		std::string is = "not ";
+		Point a(a1, a2);
+		Point b(b1, b2);
+		Point c(c1, c2);
+		Point point(p1, p2);
+		
+		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
+		std::cout << "B(" << b1 << ", " << b2 << "), ";
+		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
+		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;		std::cout << "bsp result :\n";
+		is_in_triangle(a, b, c, point);
+		std::cout << std::endl;
+	}
+	{
+		float a1 = 0;
+		float a2 = 0;
+		float b1 = 2;
+		float b2 = 0;
+		float c1 = 1;
+		float c2 = 3;
+		float p1 = 1;
+		float p2 = 2;
+		std::string pointName = "P5";
+		std::string is = "";
+		Point a(a1, a2);
+		Point b(b1, b2);
+		Point c(c1, c2);
+		Point point(p1, p2);
+		
+		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
+		std::cout << "B(" << b1 << ", " << b2 << "), ";
+		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
+		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;		std::cout << "bsp result :\n";
+		is_in_triangle(a, b, c, point);
+		std::cout << std::endl;
+	}
+	{
+		float a1 = 0;
+		float a2 = 0;
+		float b1 = 1;
+		float b2 = 0;
+		float c1 = 0.5f;
+		float c2 = 1;
+		float p1 = 0.8;
+		float p2 = 0.8;
+		std::string pointName = "P6";
+		std::string is = "not ";
+		Point a(a1, a2);
+		Point b(b1, b2);
+		Point c(c1, c2);
+		Point point(p1, p2);
+		
+		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
+		std::cout << "B(" << b1 << ", " << b2 << "), ";
+		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
+		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;		std::cout << "bsp result :\n";
+		is_in_triangle(a, b, c, point);
+		std::cout << std::endl;
+	}
+	{
+		float a1 = 0;
+		float a2 = 0;
+		float b1 = 1;
+		float b2 = 0;
+		float c1 = 0.5f;
+		float c2 = 1;
+		float p1 = 0.5;
+		float p2 = 0;
+		std::string pointName = "P7";
+		std::string is = "";
 		Point a(a1, a2);
 		Point b(b1, b2);
 		Point c(c1, c2);
