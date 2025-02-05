@@ -6,14 +6,14 @@
 #    By: gozon <gozon@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/18 11:02:35 by gozon             #+#    #+#              #
-#    Updated: 2025/02/03 15:19:37 by gozon            ###   ########.fr        #
+#    Updated: 2025/02/05 12:13:40 by gozon            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = tests
+NAME = bsp
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC_FILES = Fixed.cpp main.cpp
+SRC_FILES = bsp.cpp Point.cpp Fixed.cpp main.cpp
 OBJ_DIR = objects
 OBJ = $(SRC_FILES:%.cpp=$(OBJ_DIR)/%.o)
 
