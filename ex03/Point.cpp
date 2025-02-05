@@ -6,7 +6,7 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 08:51:21 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/05 10:09:59 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/05 11:24:22 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ const Fixed& Point::scalar(const Point& origin, const Point& a, const Point& b) 
 }
 
 bool    Point::isOnSameSide(const Point& point, const Point& lineOrigin, 
-            const Point& lineDir) {
+            const Point& lineDir) const {
                 
     Fixed zero;
     Fixed scalar1;
