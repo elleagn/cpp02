@@ -6,11 +6,12 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 08:36:16 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/05 08:49:59 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/05 10:00:34 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <iostream>
 
 class Point {
 
@@ -18,6 +19,9 @@ class Point {
     
         Fixed const x;
         Fixed const y;
+
+        static const Fixed& scalar(const Point& origin, const Point& a, 
+                                const Point& b);
     
     public:
         
@@ -27,5 +31,7 @@ class Point {
             Point& operator=(Point& point);
             ~Point();
 
-        static const Fixed& scalar(Point& common, Point& a, Point& b); 
+            bool    isOnSameSide(const Point& point, const Point& lineOrigin, 
+                        const Point& lineDir);
+
 };

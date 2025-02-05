@@ -6,7 +6,7 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:11:01 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/03 15:15:36 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/05 11:13:51 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -208,24 +208,6 @@ void testMinMax(void) {
 
 int main( void ) {
     
-    std::cout << std::setfill('-') << std::setw(15) << "" << " COMPARISONS ";
-    std::cout << std::setw(15) << "" << std::endl << std::endl;
-    testComparisons();
-    std::cout << std::endl;
-
-    std::cout << std::setfill('-') << std::setw(15) << "" << " OPERATIONS ";
-    std::cout << std::setw(16) << "" << std::endl << std::endl;
-    testOperations();
-    std::cout << std::endl;
-
-    std::cout << std::setfill('-') << std::setw(16) << "" << " INCREMENT ";
-    std::cout << std::setw(16) << "" << std::endl << std::endl;
-    testIncrements();
-    std::cout << std::endl;
-
-    std::cout << std::setfill('-') << std::setw(17) << "" << " MIN/MAX ";
-    std::cout << std::setw(17) << "" << std::endl << std::endl;
-    testMinMax();
-    std::cout << std::endl;
+    
 
 }
