@@ -6,7 +6,7 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 09:16:54 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/03 15:03:25 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/05 08:40:12 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,9 @@ int const Fixed::fract_size = 8;
 
 Fixed::Fixed() : raw(0) {
 
-    std::cout << "Default constructor called" << std::endl;
-
 }
 
 Fixed::Fixed(const Fixed& fixed) : raw(fixed.raw) {
-
-    std::cout << "Copy constructor called" << std::endl;
 
 }
 
@@ -30,7 +26,6 @@ Fixed::Fixed(int const number) {
 
     long long tmp;
 
-    std::cout << "Int constructor called" << std::endl;
     tmp = number << this->fract_size;
     if (tmp > INT_MAX || tmp < INT_MIN) {
         std::cout << "Integer overflow" << std::endl;
@@ -44,7 +39,6 @@ Fixed::Fixed(float const number) {
 
     float tmp;
 
-    std::cout << "Float constructor called" << std::endl;
     tmp = number * (1 << this->fract_size);
     if (tmp > 2147483647.0 || tmp < -2147483648.0) {
         std::cout << "Integer overflow (float)" << std::endl;
@@ -57,13 +51,12 @@ Fixed::Fixed(float const number) {
 Fixed& Fixed::operator=(const Fixed& fixed) {
 
     this->raw = fixed.raw;
-    std::cout << "Copy assignment operator called" << std::endl;
     return (*this);
 
 }
 
 Fixed::~Fixed() {
-    std::cout << "Destructor called" << std::endl;
+
 }
 
 int Fixed::getRawBits(void) const {
