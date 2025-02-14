@@ -6,7 +6,7 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:11:01 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/05 14:02:42 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/14 08:41:53 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int main(void) {
 		Point b(b1, b2);
 		Point c(c1, c2);
 		Point point(p1, p2);
-		
+
 		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
 		std::cout << "B(" << b1 << ", " << b2 << "), ";
 		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
@@ -80,11 +80,12 @@ int main(void) {
 		Point b(b1, b2);
 		Point c(c1, c2);
 		Point point(p1, p2);
-		
+
 		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
 		std::cout << "B(" << b1 << ", " << b2 << "), ";
 		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
-		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;		std::cout << "bsp result :\n";
+		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;
+		std::cout << "bsp result :\n";
 		is_in_triangle(a, b, c, point);
 		std::cout << std::endl;
 	}
@@ -103,11 +104,12 @@ int main(void) {
 		Point b(b1, b2);
 		Point c(c1, c2);
 		Point point(p1, p2);
-		
+
 		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
 		std::cout << "B(" << b1 << ", " << b2 << "), ";
 		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
-		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;		std::cout << "bsp result :\n";
+		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;
+		std::cout << "bsp result :\n";
 		is_in_triangle(a, b, c, point);
 		std::cout << std::endl;
 	}
@@ -126,11 +128,12 @@ int main(void) {
 		Point b(b1, b2);
 		Point c(c1, c2);
 		Point point(p1, p2);
-		
+
 		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
 		std::cout << "B(" << b1 << ", " << b2 << "), ";
 		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
-		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;		std::cout << "bsp result :\n";
+		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;
+		std::cout << "bsp result :\n";
 		is_in_triangle(a, b, c, point);
 		std::cout << std::endl;
 	}
@@ -149,11 +152,12 @@ int main(void) {
 		Point b(b1, b2);
 		Point c(c1, c2);
 		Point point(p1, p2);
-		
+
 		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
 		std::cout << "B(" << b1 << ", " << b2 << "), ";
 		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
-		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;		std::cout << "bsp result :\n";
+		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;
+		std::cout << "bsp result :\n";
 		is_in_triangle(a, b, c, point);
 		std::cout << std::endl;
 	}
@@ -172,11 +176,12 @@ int main(void) {
 		Point b(b1, b2);
 		Point c(c1, c2);
 		Point point(p1, p2);
-		
+
 		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
 		std::cout << "B(" << b1 << ", " << b2 << "), ";
 		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
-		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;		std::cout << "bsp result :\n";
+		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;
+		std::cout << "bsp result :\n";
 		is_in_triangle(a, b, c, point);
 		std::cout << std::endl;
 	}
@@ -195,11 +200,12 @@ int main(void) {
 		Point b(b1, b2);
 		Point c(c1, c2);
 		Point point(p1, p2);
-		
+
 		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
 		std::cout << "B(" << b1 << ", " << b2 << "), ";
 		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
-		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;		std::cout << "bsp result :\n";
+		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;
+		std::cout << "bsp result :\n";
 		is_in_triangle(a, b, c, point);
 		std::cout << std::endl;
 	}
@@ -218,11 +224,12 @@ int main(void) {
 		Point b(b1, b2);
 		Point c(c1, c2);
 		Point point(p1, p2);
-		
+
 		std::cout << "Triangle A(" << a1 << ", " << a2 << "), ";
 		std::cout << "B(" << b1 << ", " << b2 << "), ";
 		std::cout << "C(" << c1 << ", " << c2 << ")." << std::endl;
-		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;		std::cout << "bsp result :\n";
+		std::cout << "Point " << pointName << "("<< p1 << ", " << p2 << ") should " << is << "be in triangle." << std::endl;
+		std::cout << "bsp result :\n";
 		is_in_triangle(a, b, c, point);
 		std::cout << std::endl;
 	}
