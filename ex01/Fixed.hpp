@@ -6,7 +6,7 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 08:37:27 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/02 09:23:41 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/14 08:29:01 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class Fixed {
     private:
 
         int raw;
-        static int const fract_size;
+        static int const fract_size = 8;
 
 };
 
