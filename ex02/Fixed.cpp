@@ -6,13 +6,11 @@
 /*   By: gozon <gozon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 09:16:54 by gozon             #+#    #+#             */
-/*   Updated: 2025/02/03 15:03:25 by gozon            ###   ########.fr       */
+/*   Updated: 2025/02/14 08:33:34 by gozon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-int const Fixed::fract_size = 8;
 
 Fixed::Fixed() : raw(0) {
 
